@@ -7,27 +7,27 @@
 
 import UIKit
 
-protocol EKScalable {
+public protocol EKScalable {
 
-    var scale: Self { get }
+    public var scale: Self { get }
 
 }
 
 extension CGFloat: EKScalable {
 
-    var scale: CGFloat {
+    public var scale: CGFloat {
         let designScreenWidth: CGFloat = 375
         let currentScreenWidth = UIScreen.main.bounds.size.width
         return self * currentScreenWidth / designScreenWidth
     }
 
-    var safeScale: CGFloat {
+    public var safeScale: CGFloat {
         let designScreenWidth: CGFloat = 375
         let currentScreenWidth = UIScreen.main.bounds.size.width
         return CGFloat(roundf(Float(Double(self * currentScreenWidth / designScreenWidth))))
     }
 
-    var unscale: CGFloat {
+    public var unscale: CGFloat {
         let designScreenWidth: CGFloat = 375
         let currentScreenWidth = UIScreen.main.bounds.size.width
         return self / currentScreenWidth * designScreenWidth
@@ -37,15 +37,15 @@ extension CGFloat: EKScalable {
 
 extension Int {
 
-    var scale: CGFloat {
+    public var scale: CGFloat {
         return CGFloat(self).scale
     }
 
-    var safeScale: CGFloat {
+    public var safeScale: CGFloat {
         return CGFloat(self).safeScale
     }
 
-    var unscale: CGFloat {
+    public var unscale: CGFloat {
         return CGFloat(self).unscale
     }
 
@@ -53,15 +53,15 @@ extension Int {
 
 extension Double {
 
-    var scale: CGFloat {
+    public var scale: CGFloat {
         return CGFloat(self).scale
     }
 
-    var safeScale: CGFloat {
+    public var safeScale: CGFloat {
         return CGFloat(self).safeScale
     }
 
-    var unscale: CGFloat {
+    public var unscale: CGFloat {
         return CGFloat(self).unscale
     }
 
@@ -69,7 +69,7 @@ extension Double {
 
 extension CGPoint: EKScalable {
 
-    var scale: CGPoint {
+    public var scale: CGPoint {
         return CGPoint(x: x.scale, y: y.scale)
     }
 
@@ -77,7 +77,7 @@ extension CGPoint: EKScalable {
 
 extension CGSize: EKScalable {
 
-    var scale: CGSize {
+    public var scale: CGSize {
         return CGSize(width: width.scale, height: height.scale)
     }
 
@@ -85,7 +85,7 @@ extension CGSize: EKScalable {
 
 extension CGRect: EKScalable {
 
-    var scale: CGRect {
+    public var scale: CGRect {
         return CGRect(origin: origin.scale, size: size.scale)
     }
 
@@ -93,7 +93,7 @@ extension CGRect: EKScalable {
 
 extension UIFont {
 
-    var scale: UIFont {
+    public var scale: UIFont {
         return UIFont(name: fontName, size: pointSize.scale) ?? UIFont.systemFont(ofSize: pointSize.scale)
     }
 
@@ -101,7 +101,7 @@ extension UIFont {
 
 extension UIEdgeInsets: EKScalable {
 
-    var scale: UIEdgeInsets {
+    public var scale: UIEdgeInsets {
         return UIEdgeInsets(top: top.scale, left: left.scale, bottom: bottom.scale, right: right.scale)
     }
 

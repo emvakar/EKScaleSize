@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "EKScale",
+    name: "EKScaleSize",
     platforms: [.iOS(.v13)],
     products: [
-        .library(name: "EKScale", targets: ["EKScale"]),
+        .library(name: "EKScaleSize", targets: ["EKScaleSize"]),
     ],
     dependencies: [],
     targets: [
-        .target(name: "EKScale", dependencies: []),
-        .testTarget(name: "EKScaleTests", dependencies: ["EKScale"]),
+        .target(name: "EKScaleSize", dependencies: []),
+        .testTarget(name: "EKScaleSizeTests", dependencies: ["EKScaleSize"]),
     ]
 )
