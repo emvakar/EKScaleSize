@@ -1,5 +1,5 @@
     import XCTest
-    @testable import EKScale
+    @testable import EKScaleSize
 
     final class EKScaleTests: XCTestCase {
         func testExample() {

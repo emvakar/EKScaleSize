@@ -9,7 +9,7 @@ import UIKit
 
 public protocol EKScalable {
 
-    public var scale: Self { get }
+    var scale: Self { get }
 
 }
 
