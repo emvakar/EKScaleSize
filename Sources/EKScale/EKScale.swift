@@ -67,7 +67,7 @@ extension Double {
 
 }
 
-extension CGPoint: Scalable {
+extension CGPoint: EKScalable {
 
     var scale: CGPoint {
         return CGPoint(x: x.scale, y: y.scale)
@@ -75,7 +75,7 @@ extension CGPoint: Scalable {
 
 }
 
-extension CGSize: Scalable {
+extension CGSize: EKScalable {
 
     var scale: CGSize {
         return CGSize(width: width.scale, height: height.scale)
@@ -83,7 +83,7 @@ extension CGSize: Scalable {
 
 }
 
-extension CGRect: Scalable {
+extension CGRect: EKScalable {
 
     var scale: CGRect {
         return CGRect(origin: origin.scale, size: size.scale)
@@ -99,7 +99,7 @@ extension UIFont {
 
 }
 
-extension UIEdgeInsets: Scalable {
+extension UIEdgeInsets: EKScalable {
 
     var scale: UIEdgeInsets {
         return UIEdgeInsets(top: top.scale, left: left.scale, bottom: bottom.scale, right: right.scale)
